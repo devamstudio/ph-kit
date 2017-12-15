@@ -1,0 +1,18 @@
+//-create list
+mixin list(type, ...list)
+	else if type == 'marked'
+		ul
+			each item in list
+				li
+					span= item
+	else if type == 'numered'
+		ol
+			each item in list
+				li
+					span= item
+	else
+		ul
+			each item in list
+				li
+					span= item
+//-create list END

@@ -1,0 +1,9 @@
+mixin fa_socials(objects)
+	ul
+		each item in objects
+			li
+				a(href=item.link)
+					if item.icon
+						i.fa(class=item.icon title=item.title)
+					else
+						=item.title

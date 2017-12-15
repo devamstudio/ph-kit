@@ -1,0 +1,37 @@
+mixin widgets(...items)
+	each item in items
+		if item == 'search'
+			.g-widget.g-widget__search
+				form.search-form(role="search" method="get")
+					.input-group
+							input.form-control(type='text' placeholder='Искать...')
+							span.input-group-btn
+								button.btn.btn-primary.px-3(type='button')
+									span Поиск
+		if item == 'recent_posts'
+			.g-widget.g-widget__recent-entries
+				h5.g-widget_title Последние записи
+				ul
+					li
+						a(href='post.html') Привет, мир!
+		if item == 'recent_comments'
+			.g-widget.g-widget__recent-comments
+				h5.g-widget_title Последние комментарии
+				ul 
+					li.recent_comments
+						span.comment-author-link
+							a.url(href='autor.html' rel='external nofollow') Мистер WordPress
+						| к записи 
+						a(href='post.html') Hello worls
+		if item == 'categories'
+			.g-widget.g-widget__categories
+				h5.g-widget_title Категории
+				ul
+					li.cat-item
+						a(href='blog.html') Без категории
+		if item == 'archive'
+			.g-widget.g-widget__archive
+				h5.g-widget_title Архив
+				ul
+					li
+						a(href='archives.html') Сентябрь 2018

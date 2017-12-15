@@ -1,0 +1,39 @@
+//- Create navigation
+mixin navigation(type, list)
+	if type == 'navigation'
+		ul
+			each item in list
+				li
+					a(href=item.link)= item.title
+	else if type == 'menu'
+		ul
+			each item in list[0]
+				li.nav_block
+					a(href=item.link)= item.title
+						if item.subnavigation
+							i.fa.fa-angle-down
+					if item.subnavigation
+						ul
+							each sub in item.subnavigation
+								li
+									a(href=sub.link)= sub.title
+	else if type == 'megamenu'
+		ul
+			each item in list
+				li.nav_block
+					a(href=item.link)= item.title
+						if item.subnavigation
+							i.fa.fa-angle-down
+					if item.subnavigation
+						ul
+							each sub in item.subnavigation
+								li
+									a(href=sub.link)= sub.title
+										if sub.subnavigation
+											i.fa.fa-angle-right
+									if sub.subnavigation
+										ul
+											each sub in item.subnavigation
+												li
+													a(href=sub.link)= sub.title
+//- Create navigation END

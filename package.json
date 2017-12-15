@@ -1,0 +1,36 @@
+{
+  "name": "ph-kit",
+  "version": "1.0.0",
+  "description": "Pug language kit to front-end design faster ## Enable elements - [ ] Global localisation - [ ] Widgets - [ ] CMS Widgets - [ ] Local CMS Widgets localisation ## How to use ### Init settings To use this kit with defaults you dont need to customise nothing. English language set as default. Othervise if you want to set another settings watch file **default.pug** to see variables",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devamstudio/ph-kit.git"
+  },
+  "keywords": [
+    "pug",
+    "kit",
+    "constructor"
+  ],
+  "author": "Arseny M. (Radiogrion)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devamstudio/ph-kit/issues"
+  },
+  "homepage": "https://github.com/devamstudio/ph-kit#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-flatten": "^0.3.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-util": "^3.0.8",
+    "gulp-watch": "^4.3.11",
+    "vinyl-ftp": "^0.6.0"
+  }
+}
