@@ -1,5 +1,5 @@
 //- Create navigation
-mixin navigation(type, list)
+mixin navigation(type, list, icons)
 	if type == 'navigation'
 		ul
 			each item in list
@@ -11,7 +11,12 @@ mixin navigation(type, list)
 				li.nav_block
 					a(href=item.link)= item.title
 						if item.subnavigation
-							i.fa.fa-angle-down
+							if !icons
+								i.fa.fa-angle-down
+							else if icons == 'ragefont'
+								i.rage.rage-chevron-bottom
+							else if icons == 'ragesymbols'
+								svg.rage: use(xlink:href='#rage-chevron-bottom')
 					if item.subnavigation
 						ul
 							each sub in item.subnavigation
@@ -23,14 +28,24 @@ mixin navigation(type, list)
 				li.nav_block
 					a(href=item.link)= item.title
 						if item.subnavigation
-							i.fa.fa-angle-down
+							if !icons
+								i.fa.fa-angle-down
+							else if icons == 'ragefont'
+								i.rage.rage-chevron-bottom
+							else if icons == 'ragesymbols'
+								svg.rage: use(xlink:href='#rage-chevron-bottom')
 					if item.subnavigation
 						ul
 							each sub in item.subnavigation
 								li
 									a(href=sub.link)= sub.title
 										if sub.subnavigation
-											i.fa.fa-angle-right
+											if !icons
+												i.fa.fa-angle-right
+											else if icons == 'ragefont'
+												i.rage.rage-chevron-right
+											else if icons == 'ragesymbols'
+												svg.rage: use(xlink:href='#rage-chevron-right')
 									if sub.subnavigation
 										ul
 											each sub in item.subnavigation
